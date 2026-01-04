@@ -354,28 +354,61 @@
 		if (!form) return;
 
 		form.addEventListener('submit', (e) => {
-			e.preventDefault();
-			feedback.textContent = '';
-			const name = form.name?.value?.trim() || qs('#cf-name')?.value?.trim();
-			const email = form.email?.value?.trim() || qs('#cf-email')?.value?.trim();
-			const message = form.message?.value?.trim() || qs('#cf-message')?.value?.trim();
+				e.preventDefault();
+				feedback.textContent = '';
+				const name = form.name?.value?.trim() || qs('#cf-name')?.value?.trim();
+				const email = form.email?.value?.trim() || qs('#cf-email')?.value?.trim();
+				const message = form.message?.value?.trim() || qs('#cf-message')?.value?.trim();
 
-			if (!name || !message) {
-				showFormFeedback('Please provide your name and a brief description.', true);
-				return;
-			}
+				if (!name || !message) {
+					showFormFeedback('Please provide your name and a brief description.', true);
+					return;
+				}
 
-			// Basic sanitization: block obvious secret/credential mentions
-			const forbidden = /(otp|one[- ]?time|password|pass(?:word)?|pin|cvv|account number|accountno|ssn)/i;
-			if (forbidden.test(message) || forbidden.test(name)){
-				showFormFeedback('Do not include OTPs, passwords, or payment details. Remove sensitive data and try again.', true);
-				return;
-			}
+				// Basic sanitization: block obvious secret/credential mentions
+				const forbidden = /(otp|one[- ]?time|password|pass(?:word)?|pin|cvv|account number|accountno|ssn)/i;
+				if (forbidden.test(message) || forbidden.test(name)){
+					showFormFeedback('Do not include OTPs, passwords, or payment details. Remove sensitive data and try again.', true);
+					return;
+				}
 
-			// Simulate successful submission — intentionally does NOT transmit data.
-			showFormFeedback('Thanks — your advisory request was noted locally. We do not transmit messages from this page.', false);
-			form.reset();
-		});
+				// Prepare to submit the validated form to FormSubmit (sends email to specified address)
+				try {
+					// Set FormSubmit endpoint to send to the plus-addressed mailbox
+					form.action = 'https://formsubmit.co/cybersafetyadvisory+form@gmail.com';
+					form.method = 'POST';
+
+					// Add helpful hidden fields if not present
+					if (!qs('input[name="_subject"]', form)) {
+						const sub = document.createElement('input');
+						sub.type = 'hidden';
+						sub.name = '_subject';
+						sub.value = 'New advisory request from website';
+						form.appendChild(sub);
+					}
+					if (!qs('input[name="_next"]', form)) {
+						const next = document.createElement('input');
+						next.type = 'hidden';
+						next.name = '_next';
+						next.value = window.location.href;
+						form.appendChild(next);
+					}
+					if (!qs('input[name="_captcha"]', form)) {
+						const cap = document.createElement('input');
+						cap.type = 'hidden';
+						cap.name = '_captcha';
+						cap.value = 'false';
+						form.appendChild(cap);
+					}
+
+					// Provide immediate feedback then submit the form normally
+					showFormFeedback('Sending your advisory request — you will be redirected briefly.', false);
+					// Allow a small delay so feedback is visible before navigation
+					setTimeout(() => form.submit(), 300);
+				} catch (err) {
+					showFormFeedback('Unable to submit form automatically. Please email us at cybersafetyadvisory+form@gmail.com', true);
+				}
+			});
 
 		clear?.addEventListener('click', () => { form.reset(); feedback.textContent = ''; });
 
