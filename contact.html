@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Reach out to CyberSafety Advisory for guidance on cyber fraud incidents. We provide advisory support safely and confidentially.">
+  <title>Contact Us — CyberSafety Advisory</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <div class="brand">
+        <a href="index.html" class="brand-link">
+          <img src="img/logo.svg" alt="CyberSafety Advisory" class="logo" width="48" height="48">
+          <div>
+            <h1 class="site-title">CyberSafety Advisory</h1>
+            <p class="site-tag">Clear Guidance in Times of Cyber Fraud</p>
+          </div>
+        </a>
+      </div>
+
+      <button id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" class="nav-toggle">Menu</button>
+
+      <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-we-help.html">How We Help</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li class="language-selector">
+            <select id="language-select" aria-label="Select language">
+              <option value="en">English</option>
+              <option value="es">Español</option>
+              <option value="fr">Français</option>
+              <option value="de">Deutsch</option>
+              <option value="it">Italiano</option>
+              <option value="pt">Português</option>
+              <option value="ru">Русский</option>
+              <option value="zh-CN">简体中文</option>
+              <option value="ja">日本語</option>
+              <option value="ko">한국어</option>
+              <option value="ar">العربية</option>
+              <option value="hi">हिन्दी</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+      <div id="google-translate-element" style="display:none" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- PAGE HERO -->
+    <section class="hero-page">
+      <div class="wrap">
+        <h2>Reach Out to Us</h2>
+        <p class="hero-sub">Get guidance on cyber fraud incidents. We're here to help safely and confidentially.</p>
+      </div>
+    </section>
+
+    <!-- TRUST NOTICE -->
+    <section class="section wrap" data-animate>
+      <div class="card" style="border: 3px solid var(--danger); background: linear-gradient(135deg, rgba(231, 76, 60, 0.02), rgba(231, 76, 60, 0.05));">
+        <h3 style="margin-top: 0; color: var(--danger);">⚠️ TRUST NOTICE</h3>
+        <p><strong>We will never ask for OTPs, passwords, or money.</strong></p>
+        <p style="margin-bottom: 0;">If anyone claiming to represent CyberSafety Advisory asks for these, they are not legitimate. Do not share sensitive information with anyone you haven't verified through official channels.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section wrap" data-animate>
+      <div class="contact-container">
+        
+        <!-- FORM SECTION -->
+        <div class="contact-form-wrapper">
+          <h3>Send us an advisory request</h3>
+          <p>Use this form to reach out for guidance on cyber fraud incidents. Be as detailed as you're comfortable with — the more information you provide, the better guidance we can offer.</p>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-row">
+              <label for="cf-name">Your name <span aria-label="required">*</span></label>
+              <input id="cf-name" name="name" type="text" required>
+              <small class="form-hint">How should we address you?</small>
+            </div>
+
+            <div class="form-row">
+              <label for="cf-email">Email address (optional)</label>
+              <input id="cf-email" name="email" type="email" inputmode="email" autocomplete="email">
+              <small class="form-hint">If you'd like a response, provide your email.</small>
+            </div>
+
+            <div class="form-row">
+              <label for="cf-phone">Phone (optional)</label>
+              <input id="cf-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel">
+              <small class="form-hint">We prefer email, but you can include a phone number.</small>
+            </div>
+
+            <div class="form-row">
+              <label for="cf-incident">Type of incident <span aria-label="required">*</span></label>
+              <select id="cf-incident" name="incident" required>
+                <option value="">-- Select an option --</option>
+                <option value="ongoing">Active/Ongoing fraud</option>
+                <option value="loss">Money or data loss</option>
+                <option value="attempt">Fraud attempt (prevented)</option>
+                <option value="suspicion">Suspicious activity</option>
+                <option value="general">General inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="cf-message">Describe your situation <span aria-label="required">*</span></label>
+              <textarea id="cf-message" name="message" rows="7" required placeholder="Be as detailed as comfortable. Do NOT include OTPs, passwords, or card details."></textarea>
+              <small class="form-hint"><strong>Important:</strong> Do not include OTPs, passwords, CVV codes, or other sensitive information.</small>
+            </div>
+
+            <div class="form-row">
+              <label class="checkbox">
+                <input type="checkbox" name="confirm" required>
+                <span>I understand this is advisory only and CyberSafety Advisory does not guarantee specific outcomes.</span>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Send Request</button>
+              <button type="button" id="cf-clear" class="btn ghost">Clear Form</button>
+            </div>
+
+            <div id="cf-feedback" class="form-feedback" role="status" aria-live="polite" aria-atomic="true"></div>
+          </form>
+        </div>
+
+        <!-- INFO SECTION -->
+        <div class="contact-info-wrapper">
+          <h3>Direct Contact Information</h3>
+
+          <div class="info-box">
+            <h4>📧 Email</h4>
+            <p><strong>contact@cybersafety.example</strong></p>
+            <p><small>Send us an email directly with your question or request. We aim to respond as soon as possible.</small></p>
+          </div>
+
+          <div class="info-box">
+            <h4>💼 LinkedIn</h4>
+            <p><strong>CyberSafety Advisory</strong></p>
+            <p><small>Connect with us on LinkedIn to stay updated on resources and initiatives.</small></p>
+          </div>
+
+          <div class="info-box">
+            <h4>⏱️ Response Time</h4>
+            <p>We aim to respond to requests as soon as possible, but we cannot promise a specific timeline. If your situation is urgent, please contact official channels (your bank, local law enforcement) immediately.</p>
+          </div>
+
+          <div class="info-box">
+            <h4>🔒 Your Privacy</h4>
+            <p>Your information is safe with us. We do not store data permanently, do not use tracking, and do not share information with third parties. Your privacy is our priority.</p>
+          </div>
+
+          <div class="info-box">
+            <h4>⚠️ Active/Urgent Situations</h4>
+            <p>If you're in active danger or experiencing ongoing fraud with money at risk, <strong>contact your bank and local law enforcement immediately</strong>. We provide advisory support, but official channels must handle active incidents.</p>
+          </div>
+
+          <div class="info-box">
+            <h4>✅ What We Can Do</h4>
+            <ul class="check-list">
+              <li>Provide calm, practical advisory guidance</li>
+              <li>Help you understand your situation</li>
+              <li>Suggest safe next steps</li>
+              <li>Direct you to official resources</li>
+              <li>Offer educational support</li>
+            </ul>
+          </div>
+
+          <div class="info-box">
+            <h4>❌ What We Cannot Do</h4>
+            <ul class="x-list">
+              <li>Access or recover your accounts</li>
+              <li>Handle or recover money</li>
+              <li>Guarantee specific outcomes</li>
+              <li>Replace official channels (banks, police)</li>
+              <li>Provide legal advice</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section wrap" data-animate>
+      <h3>Common Questions About Contact</h3>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-toggle" aria-expanded="false" aria-controls="faq-1">
+            <span>How do I know you won't steal my information?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div id="faq-1" class="faq-answer" hidden>
+            <p>We collect no data, use no trackers, and do not store information permanently. We are a static website with no backend database. All form interactions happen client-side — your information never reaches our servers. You can inspect our code (it's all HTML, CSS, and JavaScript) to verify this.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-toggle" aria-expanded="false" aria-controls="faq-2">
+            <span>Is my information safe if I use the form?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div id="faq-2" class="faq-answer" hidden>
+            <p>The form is for your convenience if you want to reach out. However, since we don't store data, submitting the form doesn't actually send us an email or store your information. We recommend using email directly: <strong>contact@cyberclarity.example</strong></p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-toggle" aria-expanded="false" aria-controls="faq-3">
+            <span>Why don't you guarantee a response?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div id="faq-3" class="faq-answer" hidden>
+            <p>We are a student-led volunteer initiative. We do our best to respond, but response times depend on team availability. We prioritize urgent situations and work as quickly as possible. For active fraud situations, please contact your bank and law enforcement immediately — they can help faster than we can.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-toggle" aria-expanded="false" aria-controls="faq-4">
+            <span>What happens after I reach out?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div id="faq-4" class="faq-answer" hidden>
+            <p>Once we receive your message, we will review it and respond with guidance tailored to your situation. Our response will include practical next steps, official resources, and clarification on what we can and cannot help with. We will never ask you to share sensitive information or money.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-toggle" aria-expanded="false" aria-controls="faq-5">
+            <span>Can you really help with my situation?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div id="faq-5" class="faq-answer" hidden>
+            <p>We can help by providing clarity, guidance, and resources. We can explain what happened, suggest safe next steps, and direct you to official channels. However, we cannot access accounts, recover money, or guarantee outcomes. Official authorities (banks, police) handle actual recovery. We maximize your chances by helping you take the right actions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-band" data-animate>
+      <div class="wrap">
+        <h3>Ready to reach out?</h3>
+        <p>Use the form above or email us directly. We're here to help.</p>
+        <a href="mailto:contact@cyberclarity.example" class="btn primary">Email Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Emergency Helpline Button -->
+  <a href="tel:1930" class="emergency-helpline" title="Call Indian Cybercrime Helpline 1930">
+    <span class="helpline-icon">🚨</span>
+    <span class="helpline-text">
+      <strong>Emergency Help</strong>
+      <small>1930 - Cybercrime Helpline</small>
+    </span>
+  </a>
+
+  <!-- Thin fixed disclaimer footer -->
+  <div id="sticky-disclaimer" class="sticky-disclaimer">
+    <div class="wrap">
+      <p>⚠️ <strong>Important:</strong> Your information is private and secure. We'll respond within 24 hours. Official actions require law enforcement or bank authority.</p>
+    </div>
+  </div>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap footer-grid">
+      <div>
+        <p><strong>Disclaimer:</strong> This website provides advisory and educational information only. We are not affiliated with banks, law enforcement, or government agencies. Outcomes depend on official authorities and platforms.</p>
+      </div>
+      <div class="footer-helpline">
+        <p><strong>Emergency Helpline:</strong> <a href="tel:1930">1930 (Toll-Free)</a> | <a href="https://cybercrime.gov.in" target="_blank" rel="noopener">Report Online</a></p>
+      </div>
+      <div class="footer-meta">
+        <p>&copy; <span id="js-year"></span> CyberSafety Advisory. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
